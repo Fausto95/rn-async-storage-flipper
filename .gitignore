@@ -1,0 +1,15 @@
+*.log
+.DS_Store
+.vscode
+build
+logs
+node_modules
+npm-debug.log*
+packages/**/npm-debug.log*
+yarn-debug.log*
+packages/**/yarn-debug.log*
+yarn-error.log*
+packages/**/yarn-error.log*
+package-lock.json
+packages/**/node_modules/
+packages/**/package-lock.json

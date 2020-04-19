@@ -1,0 +1,23 @@
+{
+    "name": "async-storage-flipper",
+    "version": "0.0.5",
+    "description": "React Native's Async Storage logger for Flipper",
+    "main": "index.js",
+    "icon": "apps",
+    "title": "React Native Async Storage Logger",
+    "category": "Logger",
+    "keywords": [
+        "flipper",
+        "react-native",
+        "async-storage"
+    ],
+    "author": "Faustino Kialungila <faustino.kialungila@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "url": "https://github.com/Fausto95/rn-async-storage-flipper"
+    },
+    "dependencies": {
+        "flipper": "^0.37.0"
+    },
+    "devDependencies": {}
+}
