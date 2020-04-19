@@ -1,6 +1,6 @@
 # Async-Storage Flipper
 
-![plugin](../images/flipper-as.png)
+![plugin](../../images/flipper-as.png)
 
 Async-Storage pluggin for [Flipper](https://fbflipper.com/).
 
