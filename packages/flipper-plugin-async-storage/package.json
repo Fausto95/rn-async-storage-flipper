@@ -1,5 +1,5 @@
 {
-    "name": "async-storage-flipper-plugin",
+    "name": "flipper-plugin-async-storage",
     "version": "0.0.3",
     "description": "Flipper plugin for React Native's Async Storage",
     "main": "index.js",
@@ -7,7 +7,9 @@
     "title": "Async Storage",
     "category": "Logger",
     "keywords": [
-        "flipper-plugin"
+        "flipper-plugin",
+        "react-native",
+        "async-storage"
     ],
     "author": "Faustino Kialungila <faustino.kialungila@gmail.com>",
     "license": "MIT",

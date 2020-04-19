@@ -3,7 +3,7 @@ import { addPlugin } from 'react-native-flipper';
 function bootstrapPlugin() {
     return new Promise((resolve) => {
         addPlugin({
-            getId: () => 'async-storage-flipper-plugin',
+            getId: () => 'flipper-plugin-async-storage',
             onConnect: (connection) => {
                 return resolve(connection);
             },

@@ -33,4 +33,4 @@ Note that you storage must have the following async methods:
 
 -   `multiGet`
 
-3. Install the [async-storage-flipper-plugin](../async-storage-flipper-plugin) in Flipper app
+3. Install the [flipper-plugin-async-storage](../flipper-plugin-async-storage) in Flipper app
