@@ -7,10 +7,7 @@
     "title": "Async Storage",
     "category": "Logger",
     "keywords": [
-        "flipper",
-        "flipper-plugin",
-        "react-native",
-        "async-storage"
+        "flipper-plugin"
     ],
     "author": "Faustino Kialungila <faustino.kialungila@gmail.com>",
     "license": "MIT",
