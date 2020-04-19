@@ -1,5 +1,7 @@
 # Async-Storage Flipper
 
+![plugin](/images/flipper-as.png)
+
 Async-Storage debugger for [Flipper](https://fbflipper.com/).
 
 ## Getting Started

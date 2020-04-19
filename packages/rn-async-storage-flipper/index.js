@@ -32,7 +32,7 @@ function ReactNativeAsyncStorageFlipper(storage) {
                             currentConnection.send('newElement', {
                                 key,
                                 value,
-                                id: key + i,
+                                id: key,
                             });
                         });
                     });
