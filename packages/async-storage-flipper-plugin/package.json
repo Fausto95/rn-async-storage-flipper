@@ -1,6 +1,6 @@
 {
     "name": "async-storage-flipper-plugin",
-    "version": "0.0.5",
+    "version": "0.0.2",
     "description": "Flipper plugin for React Native's Async Storage",
     "main": "index.js",
     "icon": "apps",
@@ -19,6 +19,5 @@
     },
     "dependencies": {
         "flipper": "^0.37.0"
-    },
-    "devDependencies": {}
+    }
 }
