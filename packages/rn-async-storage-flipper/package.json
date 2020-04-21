@@ -1,6 +1,6 @@
 {
     "name": "rn-async-storage-flipper",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "React Native's Async Storage debugger for Flipper",
     "main": "index.js",
     "keywords": [
