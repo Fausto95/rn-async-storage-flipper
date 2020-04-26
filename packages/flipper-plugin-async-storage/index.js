@@ -1,10 +1,13 @@
 import {
     Text,
     Panel,
-    ManagedDataInspector,
-    FlipperPlugin,
+    Button,
+    colors,
+    styled,
     ManagedTable,
     DetailSidebar,
+    FlipperPlugin,
+    ManagedDataInspector,
 } from 'flipper';
 
 const columns = {
@@ -31,6 +34,7 @@ class AsyncStorage extends FlipperPlugin {
 
     static defaultPersistedState = {
         data: [],
+        selectedElement: null,
     };
 
     static persistedStateReducer(persistedState, method, payload) {
@@ -55,7 +59,16 @@ class AsyncStorage extends FlipperPlugin {
         return data;
     };
 
-    onRowHighlighted = ([key]) => this.setState({ selectedElementId: key });
+    onRowHighlighted = ([selectedRowId]) => {
+        const selectedElement = this.props.persistedState.data.find(
+            (el) => el.id === selectedRowId
+        );
+        this.props.setPersistedState({ selectedElement });
+    };
+
+    sendMeData = () => {
+        this.client.call('sendMeData').then(() => this.setState({}));
+    };
 
     buildRows() {
         const { data } = this.props.persistedState;
@@ -79,7 +92,18 @@ class AsyncStorage extends FlipperPlugin {
     }
 
     render() {
-        const { data } = this.props.persistedState;
+        const {
+            persistedState: { data, selectedElement },
+        } = this.props;
+        if (!data.length) {
+            return (
+                <AsyncStorage.Container>
+                    <Button type="primary" onClick={this.sendMeData}>
+                        Get Data
+                    </Button>
+                </AsyncStorage.Container>
+            );
+        }
         return (
             <>
                 <ManagedTable
@@ -91,15 +115,30 @@ class AsyncStorage extends FlipperPlugin {
                     rows={this.buildRows()}
                     columnSizes={columnSizes}
                     onRowHighlighted={this.onRowHighlighted}
+                    actions
                 />
                 <DetailSidebar>
                     <Panel floating={false} heading={'Data'}>
-                        <ManagedDataInspector data={data} expandRoot={true} />
+                        <ManagedDataInspector
+                            data={!selectedElement ? data : selectedElement}
+                            expandRoot={true}
+                        />
                     </Panel>
                 </DetailSidebar>
             </>
         );
     }
+
+    static Container = styled.div({
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+        backgroundColor: colors.macOSTitleBarBackgroundBlur,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexGrow: 1,
+        overflow: 'scroll',
+    });
 }
 
 export default AsyncStorage;
