@@ -26,6 +26,7 @@ import RNAsyncStorageFlipper from 'rn-async-storage-flipper';
 // ....
 import AsyncStorage from '@react-native-community/async-storage';
 
+// We recommend to invoke the function inside a componentDidMount or useEffect
 RNAsyncStorageFlipper(AsyncStorage);
 ```
 
