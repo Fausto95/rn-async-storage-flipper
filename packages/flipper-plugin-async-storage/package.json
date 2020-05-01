@@ -2,7 +2,7 @@
   "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
   "name": "flipper-plugin-async-storage",
   "id": "flipper-plugin-async-storage",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Flipper plugin for React Native's Async Storage",
   "main": "dist/bundle.js",
   "flipperBundlerEntry": "index.js",
