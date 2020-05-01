@@ -1,22 +1,32 @@
 {
-    "name": "flipper-plugin-async-storage",
-    "version": "0.0.7",
-    "description": "Flipper plugin for React Native's Async Storage",
-    "main": "index.js",
-    "icon": "apps",
-    "title": "Async Storage",
-    "category": "Logger",
-    "keywords": [
-        "flipper-plugin",
-        "react-native",
-        "async-storage"
-    ],
-    "author": "Faustino Kialungila <faustino.kialungila@gmail.com>",
-    "license": "MIT",
-    "repository": {
-        "url": "https://github.com/Fausto95/rn-async-storage-flipper"
-    },
-    "dependencies": {
-        "flipper": "^0.37.0"
-    }
+  "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
+  "name": "flipper-plugin-async-storage",
+  "id": "flipper-plugin-async-storage",
+  "version": "0.0.7",
+  "description": "Flipper plugin for React Native's Async Storage",
+  "main": "dist/bundle.js",
+  "flipperBundlerEntry": "index.js",
+  "icon": "apps",
+  "title": "Async Storage",
+  "category": "Logger",
+  "keywords": [
+    "flipper-plugin",
+    "react-native",
+    "async-storage"
+  ],
+  "author": "Faustino Kialungila <faustino.kialungila@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Fausto95/rn-async-storage-flipper"
+  },
+  "peerDependencies": {
+    "flipper": "latest"
+  },
+  "devDependencies": {
+    "flipper": "latest",
+    "flipper-pkg": "latest"
+  },
+  "scripts": {
+    "prepack": "flipper-pkg lint && flipper-pkg bundle"
+  }
 }
