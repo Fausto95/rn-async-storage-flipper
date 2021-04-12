@@ -22,9 +22,6 @@
         "react-native": "^0.62.0",
         "react-native-flipper": "^0.37.0"
     },
-    "dependencies": {
-        "react-native-flipper": "^0.37.0"
-    },
     "devDependencies": {
         "tsd": "^0.11.0"
     }
